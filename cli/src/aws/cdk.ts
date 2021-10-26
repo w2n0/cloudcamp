@@ -1,11 +1,13 @@
-import { CDK_VERSION } from "@cloudcamp/aws-runtime/src/constants";
 import { AwsRegion } from "@cloudcamp/aws-runtime/src/types";
 import * as child_process from "child_process";
 import * as readline from "readline";
 import cli from "cli-ux";
 import { Readable } from "stream";
 import { UX } from "../ux";
+import path from "path";
 let fsExtra = require("fs-extra");
+
+let cdkBinary = path.join(__dirname, "..", "..", "node_modules", ".bin", "cdk");
 
 /**
  * Run CDK commands
@@ -13,7 +15,7 @@ let fsExtra = require("fs-extra");
 export class CDK {
   static async bootstrap(account: string, region: AwsRegion, profile?: string) {
     let cmd =
-      `npx cdk@${CDK_VERSION} bootstrap --trust ${account} aws://${account}/${region} ` +
+      `${cdkBinary} bootstrap --trust ${account} aws://${account}/${region} ` +
       ` --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess`;
     if (profile) {
       cmd += ` --profile ${profile}`;
@@ -38,7 +40,7 @@ export class CDK {
   }
 
   static async synth(profile?: string) {
-    let cmd = `npx cdk@${CDK_VERSION} synth`;
+    let cmd = `${cdkBinary} synth`;
     if (profile) {
       cmd += ` --profile ${profile}`;
     }
@@ -82,7 +84,7 @@ export class CDK {
   }
 
   static async deploy(ux: UX, profile?: string) {
-    let cmd = `npx cdk@${CDK_VERSION} deploy --require-approval never --progress events`;
+    let cmd = `${cdkBinary} deploy --require-approval never --progress events`;
     if (profile) {
       cmd += ` --profile ${profile}`;
     }

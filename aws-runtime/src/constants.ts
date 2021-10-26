@@ -9,4 +9,3 @@ export const CONTEXT_KEY_VPC = "@cloudcamp/vpc";
 export const CONTEXT_REPOSITORY_TOKEN_SECRET =
   "@cloudcamp/repository-token-secret";
 export const CONTEXT_KEY_CLOUDCAMP_VERSION = "@cloudcamp/cloudcamp-version";
-export const CDK_VERSION = "1.115.0";

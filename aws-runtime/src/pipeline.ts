@@ -6,7 +6,7 @@ import * as _ from "lodash";
 import * as fs from "fs";
 import * as path from "path";
 import { RepositoryHost } from "./types";
-import { CAMP_HOME_DIR, CDK_VERSION } from "./constants";
+import { CAMP_HOME_DIR } from "./constants";
 import { Language } from "./language";
 import { App } from "./app";
 
@@ -98,10 +98,14 @@ export class PipelineStack extends cdk.Stack {
     synthCommand: string;
   } {
     let language = this.getLanguage();
+    let packageJson = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "..", "package.json")).toString()
+    );
+    let cdkVersion = packageJson.devDependencies["@aws-cdk/core"];
 
     // commands run in a subshell (the parentheses) to preserve cwd
     let installCommand =
-      `npm install -g npm@latest && npm install aws-cdk@${CDK_VERSION} -g ` +
+      `npm install -g npm@latest && npm install aws-cdk@${cdkVersion} -g ` +
       `&& (${language.installCommand})`;
     let buildCommand = `(${language.buildCommand})`;
     if (buildCommand) {

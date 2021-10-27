@@ -19,7 +19,6 @@
   },
   "standard-version": {
     "scripts": {
-      "prebump": "echo 0.0.1-alpha.0",
       "postbump": "jq \".dependencies.\\\"@cloudcamp/aws-runtime\\\" = \\\"$(jq -r '.version' package.json)\\\"\" cli/package.json | sponge cli/package.json"
     }
   },

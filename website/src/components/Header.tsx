@@ -14,7 +14,7 @@ export default function Header({
       <meta charSet="utf-8" />
       <title>{"cloudcamp - " + title}</title>
       {canonical && (
-        <link rel="canonical" href={"{https://cloudcamp.sh" + canonical} />
+        <link rel="canonical" href={"{https://cloudcamphq.com" + canonical} />
       )}
     </Helmet>
   );

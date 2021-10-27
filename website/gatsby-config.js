@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://cloudcamp.sh",
+    siteUrl: "https://cloudcamphq.com",
     title: "cloudcamp",
   },
   plugins: [

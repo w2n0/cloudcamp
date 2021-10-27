@@ -1640,6 +1640,13 @@
       "namespace": "Cloudcamp.Aws.Runtime",
       "packageId": "Cloudcamp.Aws.Runtime"
     },
+    "java": {
+      "maven": {
+        "artifactId": "runtime",
+        "groupId": "cloudcamp.aws"
+      },
+      "package": "cloudcamp.aws.runtime"
+    },
     "js": {
       "npm": "@cloudcamp/aws-runtime"
     },
@@ -4372,5 +4379,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "7ilubgnYm1u+LYJPhpdk/m7fsqUZlrB4WkrKIEbdrRI="
+  "fingerprint": "4wSERGzGDF4xTIh4+vTuZ2ZwwQnDVJd9xak6tjzgP04="
 }

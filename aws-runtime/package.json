@@ -26,6 +26,13 @@
     },
     "versionFormat": "short",
     "targets": {
+      "java": {
+        "package": "cloudcamp.aws.runtime",
+        "maven": {
+          "groupId": "cloudcamp.aws",
+          "artifactId": "runtime"
+        }
+      },
       "python": {
         "distName": "cloudcamp.aws-runtime",
         "module": "cloudcamp.aws_runtime"

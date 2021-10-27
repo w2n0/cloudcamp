@@ -73,7 +73,7 @@
   "bundledDependencies": [],
   "main": "lib/index.js",
   "license": "MIT",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.0",
   "types": "lib/index.d.ts",
   "files": [
     "/bin",

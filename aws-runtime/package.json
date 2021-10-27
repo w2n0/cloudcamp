@@ -1,20 +1,33 @@
 {
   "name": "@cloudcamp/aws-runtime",
-  "description": "cloudcamp - Launch faster by automating your infrastructure.",
+  "description": "CloudCamp - Launch faster by automating your infrastructure.",
   "main": "lib/index.js",
   "scripts": {
     "build": "jsii -v && cp .jsii ../website/content/api/api.json",
     "build:watch": "fswatch -o .jsii | xargs -n1 -I{} cp .jsii ../website/content/api/api.json & jsii --watch; killall -KILL fswatch",
     "package": "jsii-pacmak"
   },
-  "keywords": [],
+  "keywords": [
+    "aws",
+    "cdk",
+    "cloud",
+    "cloud-computing",
+    "cloud-infrastructure",
+    "iac",
+    "infrastructure-as-code"
+  ],
   "author": {
     "name": "Markus Ecker",
-    "email": "me@instant.st"
+    "email": "markus.ecker@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/cloudcamphq/cloudcamp.git"
+    "type": "git",
+    "url": "git+https://github.com/cloudcamphq/cloudcamp.git"
   },
+  "bugs": {
+    "url": "https://github.com/cloudcamphq/cloudcamp/issues"
+  },
+  "homepage": "https://cloudcamphq.com",
   "license": "MIT",
   "stability": "experimental",
   "types": "lib/index.d.ts",

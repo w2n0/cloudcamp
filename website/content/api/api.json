@@ -1,6 +1,6 @@
 {
   "author": {
-    "email": "me@instant.st",
+    "email": "markus.ecker@gmail.com",
     "name": "Markus Ecker",
     "roles": [
       "author"
@@ -1607,13 +1607,21 @@
       }
     }
   },
-  "description": "cloudcamp - Launch faster by automating your infrastructure.",
+  "description": "CloudCamp - Launch faster by automating your infrastructure.",
   "docs": {
     "stability": "experimental"
   },
-  "homepage": "https://github.com/cloudcamphq/cloudcamp.git",
+  "homepage": "https://cloudcamphq.com",
   "jsiiVersion": "1.37.0",
-  "keywords": [],
+  "keywords": [
+    "aws",
+    "cdk",
+    "cloud",
+    "cloud-computing",
+    "cloud-infrastructure",
+    "iac",
+    "infrastructure-as-code"
+  ],
   "license": "MIT",
   "metadata": {
     "jsii": {
@@ -4378,6 +4386,6 @@
       ]
     }
   },
-  "version": "0.0.0",
-  "fingerprint": "4wSERGzGDF4xTIh4+vTuZ2ZwwQnDVJd9xak6tjzgP04="
+  "version": "0.0.1-alpha.0",
+  "fingerprint": "5pUz6ncvj54ZOvYTNw3ITy8ZVEA24cdHqPPAPGRZ0xo="
 }
